@@ -14,7 +14,13 @@ class IndexController extends Controller
     public function login(){
         $data=request()->except('_token');
         $url='http://passport.bianaoao.top/pass/login';
-        $res= $this->post($url,$data);
+        // $url='http://passport.com/pass/login';
+        $res=$this->post($url,$data);
+        $a=json_decode($res,true);
+        // dump($a);
+        if($a['error']!='ok'){
+            return view('er.index',['link'=>$a]);
+        }
     }
       //post 请求
    public function post($url,$data){
@@ -23,8 +29,10 @@ class IndexController extends Controller
     curl_setopt($ch,CURLOPT_URL,$url);
     curl_setopt($ch,CURLOPT_POST,1);
     curl_setopt($ch,CURLOPT_POSTFIELDS,$data);
-    curl_exec($ch);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+    $request=curl_exec($ch);
     curl_close($ch);
+   return $request;
 }
 
 }

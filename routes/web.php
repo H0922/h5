@@ -27,7 +27,6 @@ Route::post('reg/insert','Reg\IndexController@insert');
 //登录页mioan
 Route::get('login/index','Login\IndexController@index');
 Route::post('login/login','Login\IndexController@login');
- 
 
 
 
