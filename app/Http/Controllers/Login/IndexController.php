@@ -14,7 +14,7 @@ class IndexController extends Controller
     public function login(){
         $data=request()->except('_token');
         $url='http://passport.bianaoao.top/pass/login';
-        // $url='http://passport.com/pass/login';
+        // $url='http://passport.com/pass/login'
         $res=$this->post($url,$data);
         $a=json_decode($res,true);
         $s=[
