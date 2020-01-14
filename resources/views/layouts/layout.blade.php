@@ -9,17 +9,17 @@
 	<meta name="apple-touch-fullscreen" content="yes">
 	<meta name="HandheldFriendly" content="True">
 
-	<link rel="stylesheet" href="weixin/css/materialize.css">
-	<link rel="stylesheet" href="weixin/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="weixin/css/normalize.css">
-	<link rel="stylesheet" href="weixin/css/owl.carousel.css">
-	<link rel="stylesheet" href="weixin/css/owl.theme.css">
-	<link rel="stylesheet" href="weixin/css/owl.transitions.css">
-	<link rel="stylesheet" href="weixin/css/fakeLoader.css">
-	<link rel="stylesheet" href="weixin/css/animate.css">
-	<link rel="stylesheet" href="weixin/css/style.css">
+	<link rel="stylesheet" href="/css/materialize.css">
+	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/owl.carousel.css">
+	<link rel="stylesheet" href="/css/owl.theme.css">
+	<link rel="stylesheet" href="/css/owl.transitions.css">
+	<link rel="stylesheet" href="/css/fakeLoader.css">
+	<link rel="stylesheet" href="/css/animate.css">
+	<link rel="stylesheet" href="/css/style.css">
 	
-	<link rel="shortcut icon" href="weixin/img/favicon.png">
+	<link rel="shortcut icon" href="/img/favicon.png">
 
 </head>
 <body>
@@ -46,7 +46,7 @@
 			<li><a href="about-us.html"><i class="fa fa-user"></i>About Us</a></li>
 			<li><a href="contact.html"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
 			<li><a href="login.html"><i class="fa fa-sign-in"></i>Login</a></li>
-			<li><a href="register.html"><i class="fa fa-user-plus"></i>Register</a></li>
+			<li><a href="{{url('reg/index')}}"><i class="fa fa-user-plus"></i>Register</a></li>
 		</ul>
 	</div>
 	<div class="navbar-bottom">
@@ -242,7 +242,118 @@
 				</div>
 			</div>
 		</div>
-    </div>
+	</div>
+	<div class="menus" id="animatedModal">
+		<div class="close-animatedModal close-icon">
+			<i class="fa fa-close"></i>
+		</div>
+		<div class="modal-content">
+			<div class="cart-menu">
+				<div class="container">
+					<div class="content">
+						<div class="cart-1">
+							<div class="row">
+								<div class="col s5">
+									<img src="img/cart-menu1.png" alt="">
+								</div>
+								<div class="col s7">
+									<h5><a href="">Fashion Men's</a></h5>
+								</div>
+							</div>
+							<div class="row quantity">
+								<div class="col s5">
+									<h5>Quantity</h5>
+								</div>
+								<div class="col s7">
+									<input value="1" type="text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s5">
+									<h5>Price</h5>
+								</div>
+								<div class="col s7">
+									<h5>$20</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s5">
+									<h5>Action</h5>
+								</div>
+								<div class="col s7">
+									<div class="action"><i class="fa fa-trash"></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="divider"></div>
+						<div class="cart-2">
+							<div class="row">
+								<div class="col s5">
+									<img src="img/cart-menu2.png" alt="">
+								</div>
+								<div class="col s7">
+									<h5><a href="">Fashion Men's</a></h5>
+								</div>
+							</div>
+							<div class="row quantity">
+								<div class="col s5">
+									<h5>Quantity</h5>
+								</div>
+								<div class="col s7">
+									<input value="1" type="text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s5">
+									<h5>Price</h5>
+								</div>
+								<div class="col s7">
+									<h5>$20</h5>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col s5">
+									<h5>Action</h5>
+								</div>
+								<div class="col s7">
+									<div class="action"><i class="fa fa-trash"></i></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="total">
+						<div class="row">
+							<div class="col s7">
+								<h5>Fashion Men's</h5>
+							</div>
+							<div class="col s5">
+								<h5>$21.00</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s7">
+								<h5>Fashion Men's</h5>
+							</div>
+							<div class="col s5">
+								<h5>$21.00</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s7">
+								<h6>Total</h6>
+							</div>
+							<div class="col s5">
+								<h6>$41.00</h6>
+							</div>
+						</div>
+					</div>
+					<button class="btn button-default">Process to Checkout</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end cart menu -->
+
     	<!-- cart menu -->
 	{{-- <div class="menus" id="animatedModal"> --}}
         @yield('content')
@@ -265,12 +376,12 @@
 				</div>
 			</div>
 		</div>
-    <script src="weixin/js/jquery.min.js"></script>
-	<script src="weixin/js/materialize.min.js"></script>
-	<script src="weixin/js/owl.carousel.min.js"></script>
-	<script src="weixin/js/fakeLoader.min.js"></script>
-	<script src="weixin/js/animatedModal.min.js"></script>
-	<script src="weixin/js/main.js"></script>
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/materialize.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/fakeLoader.min.js"></script>
+	<script src="/js/animatedModal.min.js"></script>
+	<script src="/js/main.js"></script>
 	
 </body>
 </html>
