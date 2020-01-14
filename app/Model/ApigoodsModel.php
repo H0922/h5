@@ -4,8 +4,9 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WxGoodsModel extends Model
+class ApigoodsModel extends Model
 {
-    protected $table = "wx_goods";
+    protected $table = "api_goods";
     protected $primaryKey = "goods_id";
+
 }

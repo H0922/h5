@@ -2,7 +2,7 @@
 
 namespace App\Admin\Controllers;
 
-use App\Model\WxGoodsModel;
+use App\Model\ApigoodsModel;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -15,7 +15,7 @@ class GoodsController extends AdminController
      *
      * @var string
      */
-    protected $title = '商哝管睆';
+    protected $title = 'App\Model\ApigoodsModel';
 
     /**
      * Make a grid builder.
@@ -24,15 +24,15 @@ class GoodsController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new WxGoodsModel);
+        $grid = new Grid(new ApigoodsModel);
 
-        $grid->column('goods_id', __('Goods id'));
-        $grid->column('goods_name', __('Goods name'));
-        $grid->column('goods_img', __('Goods img'))->image();
-        $grid->column('goods_desc', __('Goods desc'));
-        $grid->column('goods_price', __('Goods price'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('goods_id', __('商品编号'));
+        $grid->column('goods_name', __('商品名称'));
+        $grid->column('goods_img', __('商品照片'))->image();
+        $grid->column('goods_desc', __('商品描述'));
+        $grid->column('goods_price', __('商品价格'));
+        // $grid->column('created_at', __('Created at'));
+        // $grid->column('updated_at', __('Updated at'));
 
         return $grid;
     }
@@ -45,7 +45,7 @@ class GoodsController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(WxGoodsModel::findOrFail($id));
+        $show = new Show(ApigoodsModel::findOrFail($id));
 
         $show->field('goods_id', __('Goods id'));
         $show->field('goods_name', __('Goods name'));
@@ -65,14 +65,12 @@ class GoodsController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new WxGoodsModel);
+        $form = new Form(new ApigoodsModel);
 
         $form->text('goods_name', __('Goods name'));
         $form->image('goods_img', __('Goods img'));
+        $form->text('goods_desc', __('Goods desc'));
         $form->number('goods_price', __('Goods price'));
-        // $form->text('goods_desc', __('Goods desc'));
-        $form->ckeditor('goods_desc',__('Goods desc'));
-  
 
         return $form;
     }
