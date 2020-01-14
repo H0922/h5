@@ -17,13 +17,13 @@ class IndexController extends Controller
         // $url='http://passport.com/pass/login'
         $res=$this->post($url,$data);
         $a=json_decode($res,true);
-        $s=[
-            'token'=>$a['token'],
-            'name'=>$data['name']
-        ];
         if($a['error']!='ok'){
             return view('er.index',['link'=>$a]);
         }else{
+            $s=[
+                'token'=>$a['token'],
+                'name'=>$data['name']
+            ];
             session(['name'=>$data['name']]);
             session(['token'=>$s]);
             return redirect('index');
