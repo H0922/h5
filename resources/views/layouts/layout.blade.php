@@ -92,7 +92,7 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="product-list.html" class="button-link">
+						<a href="{{url('goods/index')}}" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-bars"></i>
@@ -220,7 +220,7 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="login.html" class="button-link">
+						<a href="{{url('login/index')}}" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-sign-in"></i>
@@ -230,7 +230,7 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="register.html" class="button-link">
+						<a href="{{url('reg/index')}}" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-user-plus"></i>

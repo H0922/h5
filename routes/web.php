@@ -28,6 +28,10 @@ Route::post('reg/insert','Reg\IndexController@insert');
 Route::get('login/index','Login\IndexController@index');
 Route::post('login/login','Login\IndexController@login');
 
+//商品
+Route::get('goods/index','Goods\GoodsController@index');
+
+
 
 
 
