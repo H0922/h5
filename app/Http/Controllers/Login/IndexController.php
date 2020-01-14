@@ -17,10 +17,14 @@ class IndexController extends Controller
         // $url='http://passport.com/pass/login';
         $res=$this->post($url,$data);
         $a=json_decode($res,true);
-        // dump($a);
         if($a['error']!='ok'){
             return view('er.index',['link'=>$a]);
+        }else{
+            session(['name'=>$data['name']]);
+            session([$data['name']=>$a['token']]);
+            return redirect('index');
         }
+       
     }
       //post 请求
    public function post($url,$data){

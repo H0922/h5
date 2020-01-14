@@ -21,9 +21,9 @@
                 <div class="col s6">
                         <div class="content">
                             <img src="{{env('APP_URL').'/storage/'.$v->goods_img}}" alt="">
-                            <h6><a href="">{{$v->goods_name}}</a></h6>
+                            <h6><a href="{{url('goods/list').'/'.$v->goods_id}}">{{$v->goods_name}}</a></h6>
                             <div class="price">
-                                ${{$v->goods_price}} <span>$28</span>
+                                ￥{{$v->goods_price}} <span>￥{{$v->goods_price*1.2}}</span>
                             </div>
                             <button class="btn button-default">添加购物车</button>
                         </div>

@@ -30,6 +30,7 @@ Route::post('login/login','Login\IndexController@login');
 
 //商品
 Route::get('goods/index','Goods\GoodsController@index');
+Route::get('goods/list/{goods_id}','Goods\GoodsController@list');
 
 
 

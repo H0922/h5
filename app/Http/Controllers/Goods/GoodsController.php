@@ -12,5 +12,10 @@ class GoodsController extends Controller
         // dd($data);
         return view('goods.index',['data'=>$data]);
     }   
+        //商品详情也
+    public function list($goods_id){
+      $link=Goods::find($goods_id);
+      return view('goods.list',['link'=>$link]);
+    }
 
 }

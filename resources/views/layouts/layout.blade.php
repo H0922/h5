@@ -34,11 +34,12 @@
 	<div class="side-nav-panel-right">
 		<ul id="slide-out-right" class="side-nav side-nav-panel collapsible">
 			<li class="profil">
-				@if (session('nickname') && session('headimgurl'))
-				<img src="{{session('headimgurl')??''}}" alt="">
-				<h2>{{session('nickname')??''}}</h2>
+				@if (session('name')??'')
+				{{-- <img src="" alt=""> --}}
+				<h2>欢迎您</h2>
+				<h2>{{session('name')??''}}</h2>
 				@else
-					<h3>您还没<a href="{{url('index/login')}}">登录</a></h3>
+				<a href="{{url('login/index')}}"><h2>登录</h2></a>
 				@endif
 				
 			</li>
