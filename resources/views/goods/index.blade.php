@@ -15,7 +15,7 @@
 					<option value="4">Low Price</option>
 					<option value="5">High Price</option>
 				</select>
-			</div>
+            </div>
 			<div class="row">
                 @foreach ($data as $v)
                 <div class="col s6">

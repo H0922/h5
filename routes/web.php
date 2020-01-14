@@ -27,7 +27,7 @@ Route::post('reg/insert','Reg\IndexController@insert');
 //登录页mioan
 Route::get('login/index','Login\IndexController@index');
 Route::post('login/login','Login\IndexController@login');
-
+Route::get('login/user','Login\IndexController@user');
 //商品
 Route::get('goods/index','Goods\GoodsController@index');
 Route::get('goods/list/{goods_id}','Goods\GoodsController@list');

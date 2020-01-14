@@ -167,12 +167,12 @@
 						</a>
 					</div>
 					<div class="col s4">
-						<a href="error404.html" class="button-link">
+						<a href="{{url('login/user')}}" class="button-link">
 							<div class="menu-link">
 								<div class="icon">
 									<i class="fa fa-hourglass-half"></i>
 								</div>
-								404
+								User Center
 							</div>
 						</a>
 					</div>
